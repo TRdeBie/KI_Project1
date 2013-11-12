@@ -44,27 +44,52 @@ namespace Ants
             // loop through all my ants and try to give them orders
             foreach (Ant ant in state.MyAnts)
             {
-                // try all the directions
-                foreach (Direction direction in Ants.Aim.Keys)
+                //Check to see whether the ant is part of a foodroute
+                bool hasOrders = false;
+                foreach (Route route in foodRoutes)
                 {
-                    // GetDestination will wrap around the map properly
-                    // and give us a new location
-                    Location newLoc = state.GetDestination(ant, direction);
-
-                    // GetIsPassable returns true if the location is land
-                    if (state.GetIsPassable(newLoc) && !(orders.Contains(newLoc)))
+                    //If the ant is part of a route to food
+                    if (route.Start == ant)
                     {
-                        IssueOrder(ant, direction);
-                        orders.Add(newLoc);
-                        break;
+                        //Get the closest directions to target location
+                        ICollection<Direction> directions = state.GetDirections(ant,route.End);
+                        foreach (Direction direction in directions)
+                        {
+                            //Test the directions one by one
+                            Location newLoc = state.GetDestination(ant, direction);
+                            if (state.GetIsPassable(newLoc))
+                            {
+                                //If a move in that direction is possible, perform it
+                                IssueOrder(ant, direction);
+                                orders.Add(newLoc);
+                                hasOrders = true;
+                                break;
+                            }
+                        }
                     }
                 }
+                // try all the directions as usual if not given orders above
+                if (!hasOrders)
+                    foreach (Direction direction in Ants.Aim.Keys)
+                    {
+                        // GetDestination will wrap around the map properly
+                        // and give us a new location
+                        Location newLoc = state.GetDestination(ant, direction);
+
+                        // GetIsPassable returns true if the location is land
+                        if (state.GetIsPassable(newLoc) && !(orders.Contains(newLoc)))
+                        {
+                            IssueOrder(ant, direction);
+                            orders.Add(newLoc);
+                            break;
+                        }
+                    }
 
                 // check if we have time left to calculate more orders
                 if (state.TimeRemaining < 10) break;
             }
         }
-
+        /*
 		// DoTurn is run once per turn
 		public override void DoTurnOld (IGameState state)
         {
@@ -92,7 +117,7 @@ namespace Ants
 			}
             orders.Clear();
 		}
-		
+		*/
 		
 		public static void Main (string[] args)
         {
