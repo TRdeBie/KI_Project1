@@ -1,0 +1,18 @@
+
+Verschillende rollen
+Farmer
+Scout
+Aanvaller
+Verdediger
+
+
+Begin
+Begin met het zoeken naar voedsel.
+Wanneer voedsel gevonden is, ga verder met scouten.
+Nieuwe mier naar dichtsbijzijnde voedsel, daarna verder met scouten.
+
+
+Vijand
+Wanneer vijand is gespot, begin met verdedigen dat gebied door versterkingewn te sturen.
+Wanneer in minderheid, vluchten.
+Wanneer in de meerdeheid
