@@ -1,27 +1,31 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ants {
-
-	class MyBot : Bot {
+namespace Ants
+{
+	class MyBot : Bot
+    {
+        //double weight;
+        List<Location> orders = new List<Location>();
 
 		// DoTurn is run once per turn
-		public override void DoTurn (IGameState state) {
-
+		public override void DoTurn (IGameState state)
+        {
 			// loop through all my ants and try to give them orders
-			foreach (Ant ant in state.MyAnts) {
-				
+			foreach (Ant ant in state.MyAnts)
+            {
 				// try all the directions
-				foreach (Direction direction in Ants.Aim.Keys) {
-
+				foreach (Direction direction in Ants.Aim.Keys)
+                {
 					// GetDestination will wrap around the map properly
 					// and give us a new location
 					Location newLoc = state.GetDestination(ant, direction);
 
 					// GetIsPassable returns true if the location is land
-					if (state.GetIsPassable(newLoc)) {
+					if (state.GetIsPassable(newLoc) && !(orders.Contains(newLoc)))
+                    {
 						IssueOrder(ant, direction);
-						// stop now, don't give 1 and multiple orders
+                        orders.Add(newLoc);
 						break;
 					}
 				}
@@ -29,19 +33,13 @@ namespace Ants {
 				// check if we have time left to calculate more orders
 				if (state.TimeRemaining < 10) break;
 			}
-			
+            orders.Clear();
 		}
 		
 		
-		public static void Main (string[] args) {
-            #if DEBUG
-            System.Diagnostics.Debugger.Launch();
-            while (!System.Diagnostics.Debugger.IsAttached)
-            { }
-            #endif
-			new Ants().PlayGame(new MyBot());
+		public static void Main (string[] args)
+        {
+            new Ants().PlayGame(new MyBot());
 		}
-
 	}
-	
 }
