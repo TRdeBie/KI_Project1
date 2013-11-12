@@ -1,0 +1,21 @@
+D:\Temp\aibot\your bot\bin\Debug\YourBot.exe
+D:\Temp\aibot\your bot\bin\Debug\YourBot.pdb
+D:\Temp\aibot\your bot\obj\x86\Debug\YourBot.exe
+D:\Temp\aibot\your bot\obj\x86\Debug\YourBot.pdb
+C:\Users\Tim\Desktop\Kunstmatige Intelligentie\Project KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.exe
+C:\Users\Tim\Desktop\Kunstmatige Intelligentie\Project KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\Kunstmatige Intelligentie\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Tim\Desktop\Kunstmatige Intelligentie\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.exe
+C:\Users\Tim\Desktop\Kunstmatige Intelligentie\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\KI\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.exe
+C:\Users\Tim\Desktop\KI\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\KI\Project KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.exe
+C:\Users\Tim\Desktop\KI\Project KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\KI\Project KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Tim\Desktop\KI\Project_KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.exe
+C:\Users\Tim\Desktop\KI\Project_KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\MyBot.pdb
+C:\Users\Tim\Documents\GitHub\KI_Project1\your bot\obj\x86\Debug\MyBot.exe
+C:\Users\Tim\Documents\GitHub\KI_Project1\your bot\obj\x86\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\KI\Project_KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.exe
+C:\Users\Tim\Desktop\KI\Project_KI\csharp\b2ki\b2ki\your bot\bin\Debug\MyBot.pdb
+C:\Users\Tim\Desktop\KI\Project_KI\csharp\b2ki\b2ki\your bot\obj\x86\Debug\ResolveAssemblyReference.cache
