@@ -1,4 +1,17 @@
 
+Design
+
+The global goal of our ant colony bot is the sole survival of its species in a given area.
+
+Each ant will be assigned a specific role: scout, gatherer or soldier. These role that each ant has, can change depending on the state of the game.
+A scout will venture into unknown territory, saving the things he sees.
+A gatherer will move to a certain area and stay there to collect food spawning in it's field of vision. Gatherers will spread out over the map, trying to make a unbroken chain of vision for optimal food gathering.
+A soldier will move to an area where a enemy ant or anthill has been located. Depending on the amount of friendly and enemy ants in his field of vision, he will either attack or retreat and request for addition soldiers in his area.
+
+
+
+
+
 Verschillende rollen
 Farmer
 Scout
@@ -9,10 +22,10 @@ Verdediger
 Begin
 Begin met het zoeken naar voedsel.
 Wanneer voedsel gevonden is, ga verder met scouten.
-Nieuwe mier naar dichtsbijzijnde voedsel, daarna verder met scouten.
+Nieuwe mier naar dichtbijzijnde voedsel, daarna verder met scouten.
 
 
 Vijand
 Wanneer vijand is gespot, begin met verdedigen dat gebied door versterkingewn te sturen.
 Wanneer in minderheid, vluchten.
-Wanneer in de meerdeheid
+Wanneer in de meerderheid, aanvallen.
