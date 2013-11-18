@@ -1,7 +1,8 @@
-
 Design
 
 The global goal of our ant colony bot is the sole survival of its species in a given area.
+The bot will try to accomplish this by expanding and defending/scouting the larger portion of the map.
+This will result in more food income and a faster grow in population than the opposing colonies.
 
 Each ant will be assigned a specific role: scout, gatherer or soldier. These role that each ant has, can change depending on the state of the game.
 A scout will venture into unknown territory, saving the things he sees.
