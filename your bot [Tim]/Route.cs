@@ -5,47 +5,51 @@ namespace Ants
 {
     class Route
     {
-        //Represents a route from one tile to another
-        private Location start;
-        private Location end;
+        //This class stores a route from one point to another
+        private Location start, end;
         private int distance;
 
-        public Route(Location s, Location e, int d) {
+        public Route(Location s, Location e, int d)
+        {
             start = s;
             end = e;
             distance = d;
         }
 
-        public Location Start {
+        public Location GetStart
+        {
             get { return start; }
         }
 
-        public Location End {
+        public Location GetEnd
+        {
             get { return end; }
         }
 
-        public int Distance {
+        public int GetDistance
+        {
             get { return distance; }
         }
 
-        //Compare distance to distance of other route
-        public int CompareTo(Route route) {
+        public int CompareTo(Route route)
+        {
             return distance - route.distance;
         }
 
-        //Create a hashcode for the route
-        public int GetHashCode(IGameState state) {
-            return start.GetHashCode() * (state.Width * state.Height) * (state.Width * state.Height) * end.GetHashCode();
+        public int HashCode(IGameState state)
+        {
+            // =start.hashcode * mapsize * mapsize + end.hashcode
+            return start.GetHashCode() * state.Width * state.Height * state.Width * state.Height + end.GetHashCode();
         }
 
-        //Check whether an object is the same route as this route (from point A to point B)
         public bool Equals(Object o)
         {
+            //Returns whether two routes are in fact from the same start to end
             bool result = false;
-            if (ReferenceEquals(o, this))
+            if (o.GetType() == this.GetType())
             {
                 Route route = (Route)o;
-                result = start.Equals(route.Start) && end.Equals(route.End);
+                result = start.Equals(route.start) && end.Equals(route.end);
             }
             return result;
         }
