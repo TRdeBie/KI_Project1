@@ -7,7 +7,7 @@ namespace Ants
     {
         //double weight;
         private List<Location> orders = new List<Location>();
-        private Map map = new Map();
+        private Map map;
         private List<Location> unseenTiles; //Keeps track of what tiles have been seen
         private List<Location> enemyHills = new List<Location>();
 
@@ -20,6 +20,13 @@ namespace Ants
             //Keep track of food and which ants are delegated to foodfinding
             List<Location> foodTargets = new List<Location>();
             List<Location> foodAnts = new List<Location>();
+
+            //If map has not been set yet, add a new map
+            if (map == null)
+            {
+                //Create a new map
+                map = new Map(state.Width, state.Height);
+            }
 
             //Add all locations to unseen tiles set, run once
             if (unseenTiles == null)
@@ -174,6 +181,7 @@ namespace Ants
         private bool DoMoveLocation(Location ant, Location destination, IGameState state)
         {
             //Collect the best directions to go to from state.getdirections
+            //map.FindRoute(ant, destination);
             ICollection<Direction> directions = state.GetDirections(ant, destination);
             foreach (Direction direction in directions)
             {
